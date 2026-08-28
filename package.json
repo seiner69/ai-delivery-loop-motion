@@ -1,0 +1,30 @@
+{
+  "name": "ai-delivery-loop-motion",
+  "version": "1.0.0",
+  "description": "A five-scene vertical Remotion explainer about turning AI prompts into verified delivery loops.",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "remotion studio",
+    "lint": "eslint src && tsc",
+    "build": "remotion bundle",
+    "render": "remotion render KnowledgeMotion out/ai-delivery-loop.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.481",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.481"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.481",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}
