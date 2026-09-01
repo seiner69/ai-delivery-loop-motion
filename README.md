@@ -33,9 +33,10 @@ npm run dev
 npm run lint
 npm run build
 npm run render
+npm audit --registry=https://registry.npmjs.org
 ```
 
-生成的 MP4 位于 `out/ai-delivery-loop.mp4`。媒体输出默认不提交到 Git。
+生成的 MP4 位于 `out/ai-delivery-loop.mp4`。媒体输出默认不提交到 Git。安全审计命令显式使用 npm 官方注册表，避免部分镜像站不提供漏洞审计接口。
 
 ## 目录结构
 
