@@ -1,33 +1,33 @@
-# AI Delivery Loop Motion
+# AI Delivery Loop Motion（AI 交付闭环动态短片）
 
-AI Delivery Loop Motion is a 30-second, 9:16 Remotion explainer about moving from vague prompting to a repeatable delivery loop: clarify the need, decompose the work, produce a concrete output, and verify the result.
+这是一个 30 秒、9:16 的 Remotion 解释动画，主题是如何从模糊提示转向可重复的交付闭环：澄清需求、拆解工作、产出具体结果、验证结果并继续迭代。
 
-Every visual is generated with React, CSS, and inline SVG. The project has no footage, images, audio, remote fonts, tracking, or network API.
+全部画面由 React、CSS 和内联 SVG 生成，不包含实拍素材、图片、音频、远程字体、追踪代码或网络 API。
 
-## Highlights
+## 主要能力
 
-- Five six-second scenes with a continuous argument
-- Deterministic frame-based animation using `interpolate()` and `spring()`
-- Code-generated diagrams for ambiguity, packaging, delivery, verification, and iteration
-- 1080 × 1920 vertical output at 30 fps
-- High-contrast typography and a restrained cyan/amber system palette
+- 五个连续场景，每个场景 6 秒
+- 使用 `interpolate()` 和 `spring()` 实现确定性逐帧动画
+- 用代码生成“歧义、封装、交付、验证和迭代”图示
+- 1080 × 1920 竖屏输出，30 fps
+- 高对比度排版与克制的青色／琥珀色视觉系统
 
-## Prerequisites
+## 前置条件
 
-- Node.js 20 or newer
-- npm 10 or newer
-- A Chromium-compatible environment for rendering
+- Node.js 20+
+- npm 10+
+- 可用于渲染的 Chromium 兼容环境
 
-## Install and preview
+## 安装与预览
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the Remotion Studio URL printed in the terminal and select `KnowledgeMotion`.
+打开终端中显示的 Remotion Studio 地址，并选择 `KnowledgeMotion`。
 
-## Validate and render
+## 验证与渲染
 
 ```bash
 npm run lint
@@ -35,27 +35,27 @@ npm run build
 npm run render
 ```
 
-The rendered MP4 is written to `out/ai-delivery-loop.mp4`. Generated media is intentionally ignored by Git.
+生成的 MP4 位于 `out/ai-delivery-loop.mp4`。媒体输出默认不提交到 Git。
 
-## Project structure
+## 目录结构
 
 ```text
-src/Composition.tsx  Scene data, motion timing, SVG diagrams, and captions
-src/Root.tsx         Composition registration and 9:16 render settings
-src/index.ts         Remotion entry point
-src/index.css        Minimal global canvas reset
-remotion.config.ts   Image format and overwrite behavior
+src/Composition.tsx  场景数据、动画时间、SVG 图示和字幕
+src/Root.tsx         Composition 注册与 9:16 渲染设置
+src/index.ts         Remotion 入口
+src/index.css        最小全局画布重置
+remotion.config.ts   图片格式和覆盖行为
 ```
 
-## Known limitations
+## 已知限制
 
-- The narration is represented as on-screen Chinese captions; no voiceover or soundtrack is included.
-- The default font stack prefers Microsoft YaHei and falls back to a generic sans-serif font, so line wrapping can differ across operating systems.
-- Scene copy is embedded in `Composition.tsx`; there is no external configuration or localization layer.
-- The repository is a focused composition, not a general-purpose video-template engine.
+- 旁白以屏幕中文文案呈现，不包含配音或音乐。
+- 默认字体优先使用微软雅黑，并回退到通用无衬线字体；不同系统的换行可能不同。
+- 场景文案直接写在 `Composition.tsx` 中，没有外部配置或多语言层。
+- 本仓库是聚焦单一成片的 Composition，不是通用视频模板引擎。
 
-## Provenance
+## 来源
 
-The original Codex-assisted composition was created on 2026-06-11. This repository is a clean publication copy containing only the completed composition and its minimal build configuration. Generic starter documentation, remote logo assets, unused Tailwind integration, generated media, and the original Git history were excluded.
+原始 Codex 辅助作品创建于 2026-06-11。本仓库只保留完成的 Composition 和最小构建配置；通用脚手架文档、远程 Logo、未使用的 Tailwind 接入、生成媒体和原始 Git 历史均已排除。
 
-The original project marked itself `UNLICENSED`; that marker is preserved. No open-source license has been added.
+原项目标记为 `UNLICENSED`，本仓库保留该标记，没有新增开源许可证。
